@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Image gallery with Y2K sketchbook style." />
+  <title>~ Y2K Sketchbook ~ :: Gallery</title>
+  <link rel="stylesheet" href="style15.css" />
+</head>
+<body>
+  <!-- Paper texture background -->
+  <div class="page">
+
+    <!-- ===== Header ===== -->
+    <header class="masthead">
+      <div class="header-gloss"></div>
+      <h1 class="logo"><span class="sparkle">✨</span> Y2K Sketchbook <span class="sparkle">✨</span></h1>
+      <p class="tagline blink">~ hand-drawn dreams since 1999 ~</p>
+    </header>
+
+    <!-- ===== Main layout ===== -->
+    <div class="layout">
+
+      <!-- ----- Navigation Sidebar (Left) ----- -->
+      <aside class="aside-left">
+        <nav class="sketch-nav">
+          <a href="index15.html" class="nav-item">🏠 Home</a>
+          <a href="index15.html#blog" class="nav-item">📝 Blog</a>
+          <a href="gallery15.html" class="nav-item">🖼️ Gallery</a>
+          <a href="index15.html#about" class="nav-item">😎 About</a>
+          <a href="index15.html#guestbook" class="nav-item">📖 Guestbook</a>
+        </nav>
+      </aside>
+
+      <!-- ----- Main Content (Center) ----- -->
+      <main class="content">
+
+        <h2 class="sketch-title">:: photo gallery ::</h2>
+        <p class="sketch-note" style="text-align:center; margin-bottom: 10px;">✎ click on images to view full size</p>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          
+          <!-- Photo 1 -->
+          <div class="gallery-item sketch-card">
+            <div class="polaroid">
+              <div class="polaroid-photo" onclick="openModal('https://perkito.neocities.org/underwater.jpg')">
+                <img src="https://perkito.neocities.org/underwater.jpg" alt="Sunrise at the beach" />
+              </div>
+              <div class="polaroid-caption">
+                <span class="handwritten">Sunrise at the beach</span>
+                <span class="handwritten small">Dec 31, 1999</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 2 -->
+          <div class="gallery-item sketch-card">
+            <div class="polaroid">
+              <div class="polaroid-photo" onclick="openModal('https://picsum.photos/seed/city/800/600')">
+                <img src="https://picsum.photos/seed/city/300/200" alt="City lights" />
+              </div>
+              <div class="polaroid-caption">
+                <span class="handwritten">City lights</span>
+                <span class="handwritten small">Dec 25, 1999</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 3 -->
+          <div class="gallery-item sketch-card">
+            <div class="polaroid">
+              <div class="polaroid-photo" onclick="openModal('https://picsum.photos/seed/flowers/800/600')">
+                <img src="https://picsum.photos/seed/flowers/300/200" alt="Spring flowers" />
+              </div>
+              <div class="polaroid-caption">
+                <span class="handwritten">Spring flowers</span>
+                <span class="handwritten small">Apr 15, 1999</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 4 -->
+          <div class="gallery-item sketch-card">
+            <div class="polaroid">
+              <div class="polaroid-photo" onclick="openModal('https://picsum.photos/seed/fireworks/800/600')">
+                <img src="https://picsum.photos/seed/fireworks/300/200" alt="Fireworks!" />
+              </div>
+              <div class="polaroid-caption">
+                <span class="handwritten">Fireworks!</span>
+                <span class="handwritten small">Jul 4, 1999</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 5 -->
+          <div class="gallery-item sketch-card">
+            <div class="polaroid">
+              <div class="polaroid-photo" onclick="openModal('https://picsum.photos/seed/mountain/800/600')">
+                <img src="https://picsum.photos/seed/mountain/300/200" alt="Mountain trip" />
+              </div>
+              <div class="polaroid-caption">
+                <span class="handwritten">Mountain trip</span>
+                <span class="handwritten small">Aug 20, 1999</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 6 -->
+          <div class="gallery-item sketch-card">
+            <div class="polaroid">
+              <div class="polaroid-photo" onclick="openModal('https://picsum.photos/seed/art/800/600')">
+                <img src="https://picsum.photos/seed/art/300/200" alt="Art class" />
+              </div>
+              <div class="polaroid-caption">
+                <span class="handwritten">Art class</span>
+                <span class="handwritten small">Sep 10, 1999</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 7 -->
+          <div class="gallery-item sketch-card">
+            <div class="polaroid">
+              <div class="polaroid-photo" onclick="openModal('https://picsum.photos/seed/concert/800/600')">
+                <img src="https://picsum.photos/seed/concert/300/200" alt="Concert night" />
+              </div>
+              <div class="polaroid-caption">
+                <span class="handwritten">Concert night</span>
+                <span class="handwritten small">Oct 31, 1999</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 8 -->
+          <div class="gallery-item sketch-card">
+            <div class="polaroid">
+              <div class="polaroid-photo" onclick="openModal('https://picsum.photos/seed/christmas/800/600')">
+                <img src="https://picsum.photos/seed/christmas/300/200" alt="Christmas Eve" />
+              </div>
+              <div class="polaroid-caption">
+                <span class="handwritten">Christmas Eve</span>
+                <span class="handwritten small">Dec 24, 1999</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 9 -->
+          <div class="gallery-item sketch-card">
+            <div class="polaroid">
+              <div class="polaroid-photo" onclick="openModal('https://picsum.photos/seed/ocean/800/600')">
+                <img src="https://picsum.photos/seed/ocean/300/200" alt="Ocean waves" />
+              </div>
+              <div class="polaroid-caption">
+                <span class="handwritten">Ocean waves</span>
+                <span class="handwritten small">Jun 15, 1999</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+      <!-- ----- Aside (Right) ----- -->
+      <aside class="aside-right">
+
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">📷</span>
+            <h3>about this gallery</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body">
+            <p>A scrapbook of moments from 1999. Each polaroid was carefully selected to capture the essence of the millennium's final year.</p>
+            <p class="sketch-note">✎ 9 photos total</p>
+          </div>
+        </div>
+
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">🏷️</span>
+            <h3>categories</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body">
+            <ul class="archive">
+              <li><a href="#">» Nature (3)</a></li>
+              <li><a href="#">» City (2)</a></li>
+              <li><a href="#">» Events (2)</a></li>
+              <li><a href="#">» Travel (2)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">🗓️</span>
+            <h3>timeline</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body">
+            <ul class="archive">
+              <li><a href="#">» Dec 1999 (3)</a></li>
+              <li><a href="#">» Nov 1999 (1)</a></li>
+              <li><a href="#">» Oct 1999 (1)</a></li>
+              <li><a href="#">» Sep 1999 (1)</a></li>
+              <li><a href="#">» Aug 1999 (1)</a></li>
+              <li><a href="#">» Jul 1999 (1)</a></li>
+              <li><a href="#">» Apr 1999 (1)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">🔗</span>
+            <h3>cool links</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body">
+            <ul class="links">
+              <li><a href="#">★ Yahoo!</a></li>
+              <li><a href="#">★ AltaVista</a></li>
+              <li><a href="#">★ GeoCities</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer-bar"></div>
+      <p>© 1999–2002 Y2K Sketchbook · Made with Notepad · <a href="index15.html">[ BACK TO TOP ]</a></p>
+      <p class="small">
+        <span class="badge">IE 5.0+</span>
+        <span class="badge alt">Netscape</span>
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Image Modal -->
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <div class="modal-image-container">
+        <img id="modalImage" src="" alt="Full size image" />
+      </div>
+    </div>
+  </div>
+
+  <script src="script13.js"></script>
+  <script>
+    var currentZoom = 1;
+    var isDragging = false;
+    var hasMoved = false;
+    var startX, startY;
+    var translateX = 0, translateY = 0;
+    var modal = document.getElementById('imageModal');
+    var modalImage = document.getElementById('modalImage');
+    var isZoomingIn = true;
+    var maxZoom = 3;
+    var zoomStep = 0.25;
+    var clickTimeout = null;
+
+    function openModal(imageUrl) {
+      modalImage.src = imageUrl;
+      modal.style.display = 'flex';
+      currentZoom = 1;
+      translateX = 0;
+      translateY = 0;
+      isZoomingIn = true;
+      modalImage.style.transform = 'scale(1) translate(0px, 0px)';
+      modalImage.classList.add('smooth-zoom');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+      modalImage.src = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    function updateTransform() {
+      modalImage.style.transform = 'scale(' + currentZoom + ') translate(' + translateX + 'px, ' + translateY + 'px)';
+    }
+
+    // Left mouse button click to zoom (only if not dragging and not part of double-click)
+    modalImage.addEventListener('click', function(e) {
+      e.stopPropagation();
+      
+      // Don't zoom if we were dragging
+      if (hasMoved) {
+        return;
+      }
+      
+      // Clear any existing timeout
+      if (clickTimeout) {
+        clearTimeout(clickTimeout);
+        clickTimeout = null;
+        // This is the second click of a double-click, don't zoom
+        return;
+      }
+      
+      // Set timeout to detect single click
+      clickTimeout = setTimeout(function() {
+        clickTimeout = null;
+        
+        modalImage.classList.add('smooth-zoom');
+        
+        if (isZoomingIn) {
+          // Zoom in
+          if (currentZoom < maxZoom) {
+            currentZoom += zoomStep;
+            if (currentZoom > maxZoom) currentZoom = maxZoom;
+            updateTransform();
+          } else {
+            // Reached max zoom, switch to zoom out mode
+            isZoomingIn = false;
+          }
+        } else {
+          // Zoom out all the way
+          currentZoom = 1;
+          translateX = 0;
+          translateY = 0;
+          isZoomingIn = true;
+          updateTransform();
+        }
+      }, 250);
+    });
+
+    // Double click to zoom out gradually
+    modalImage.addEventListener('dblclick', function(e) {
+      e.stopPropagation();
+      
+      // Don't zoom if we were dragging
+      if (hasMoved) {
+        return;
+      }
+      
+      // Clear the single click timeout
+      if (clickTimeout) {
+        clearTimeout(clickTimeout);
+        clickTimeout = null;
+      }
+      
+      modalImage.classList.add('smooth-zoom');
+      
+      // Zoom out by step
+      if (currentZoom > 1) {
+        currentZoom -= zoomStep;
+        if (currentZoom < 1) currentZoom = 1;
+        updateTransform();
+      }
+      
+      // Reset to zoom-in mode
+      isZoomingIn = true;
+    });
+
+    // Mouse drag to pan
+    modalImage.addEventListener('mousedown', function(e) {
+      if (e.button === 0) { // Left mouse button
+        isDragging = true;
+        hasMoved = false;
+        startX = e.clientX - translateX;
+        startY = e.clientY - translateY;
+        modalImage.style.cursor = 'grabbing';
+        modalImage.classList.remove('smooth-zoom');
+      }
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (isDragging) {
+        e.preventDefault();
+        hasMoved = true;
+        translateX = e.clientX - startX;
+        translateY = e.clientY - startY;
+        updateTransform();
+      }
+    });
+
+    document.addEventListener('mouseup', function(e) {
+      if (isDragging) {
+        isDragging = false;
+        modalImage.style.cursor = 'default';
+        modalImage.classList.add('smooth-zoom');
+        // Reset hasMoved after a short delay
+        setTimeout(function() {
+          hasMoved = false;
+        }, 50);
+      }
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
