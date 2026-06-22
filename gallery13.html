@@ -282,6 +282,7 @@
       translateY = 0;
       isZoomingIn = true;
       modalImage.style.transform = 'scale(1) translate(0px, 0px)';
+      modalImage.classList.add('smooth-zoom');
       document.body.style.overflow = 'hidden';
     }
 
@@ -315,6 +316,8 @@
       // Set timeout to detect single click
       clickTimeout = setTimeout(function() {
         clickTimeout = null;
+        
+        modalImage.classList.add('smooth-zoom');
         
         if (isZoomingIn) {
           // Zoom in
@@ -352,6 +355,8 @@
         clickTimeout = null;
       }
       
+      modalImage.classList.add('smooth-zoom');
+      
       // Zoom out by step
       if (currentZoom > 1) {
         currentZoom -= zoomStep;
@@ -371,6 +376,7 @@
         startX = e.clientX - translateX;
         startY = e.clientY - translateY;
         modalImage.style.cursor = 'grabbing';
+        modalImage.classList.remove('smooth-zoom');
       }
     });
 
@@ -388,6 +394,7 @@
       if (isDragging) {
         isDragging = false;
         modalImage.style.cursor = 'default';
+        modalImage.classList.add('smooth-zoom');
         // Reset hasMoved after a short delay
         setTimeout(function() {
           hasMoved = false;
