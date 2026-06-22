@@ -264,10 +264,15 @@
   <script>
     var currentZoom = 1;
     var isDragging = false;
+    var hasMoved = false;
     var startX, startY;
     var translateX = 0, translateY = 0;
     var modal = document.getElementById('imageModal');
     var modalImage = document.getElementById('modalImage');
+    var isZoomingIn = true;
+    var maxZoom = 3;
+    var zoomStep = 0.25;
+    var clickTimeout = null;
 
     function openModal(imageUrl) {
       modalImage.src = imageUrl;
@@ -275,6 +280,7 @@
       currentZoom = 1;
       translateX = 0;
       translateY = 0;
+      isZoomingIn = true;
       modalImage.style.transform = 'scale(1) translate(0px, 0px)';
       document.body.style.overflow = 'hidden';
     }
@@ -289,28 +295,79 @@
       modalImage.style.transform = 'scale(' + currentZoom + ') translate(' + translateX + 'px, ' + translateY + 'px)';
     }
 
-    // Mouse wheel zoom
-    modalImage.addEventListener('wheel', function(e) {
-      e.preventDefault();
-      if (e.deltaY < 0) {
-        // Scroll up - zoom in
-        if (currentZoom < 3) {
-          currentZoom += 0.1;
-          updateTransform();
-        }
-      } else {
-        // Scroll down - zoom out
-        if (currentZoom > 0.5) {
-          currentZoom -= 0.1;
-          updateTransform();
-        }
+    // Left mouse button click to zoom (only if not dragging and not part of double-click)
+    modalImage.addEventListener('click', function(e) {
+      e.stopPropagation();
+      
+      // Don't zoom if we were dragging
+      if (hasMoved) {
+        return;
       }
+      
+      // Clear any existing timeout
+      if (clickTimeout) {
+        clearTimeout(clickTimeout);
+        clickTimeout = null;
+        // This is the second click of a double-click, don't zoom
+        return;
+      }
+      
+      // Set timeout to detect single click
+      clickTimeout = setTimeout(function() {
+        clickTimeout = null;
+        
+        if (isZoomingIn) {
+          // Zoom in
+          if (currentZoom < maxZoom) {
+            currentZoom += zoomStep;
+            if (currentZoom > maxZoom) currentZoom = maxZoom;
+            updateTransform();
+          } else {
+            // Reached max zoom, switch to zoom out mode
+            isZoomingIn = false;
+          }
+        } else {
+          // Zoom out all the way
+          currentZoom = 1;
+          translateX = 0;
+          translateY = 0;
+          isZoomingIn = true;
+          updateTransform();
+        }
+      }, 250);
+    });
+
+    // Double click to zoom out gradually
+    modalImage.addEventListener('dblclick', function(e) {
+      e.stopPropagation();
+      
+      // Don't zoom if we were dragging
+      if (hasMoved) {
+        return;
+      }
+      
+      // Clear the single click timeout
+      if (clickTimeout) {
+        clearTimeout(clickTimeout);
+        clickTimeout = null;
+      }
+      
+      // Zoom out by step
+      if (currentZoom > 1) {
+        currentZoom -= zoomStep;
+        if (currentZoom < 1) currentZoom = 1;
+        updateTransform();
+      }
+      
+      // Reset to zoom-in mode
+      isZoomingIn = true;
     });
 
     // Mouse drag to pan
     modalImage.addEventListener('mousedown', function(e) {
       if (e.button === 0) { // Left mouse button
         isDragging = true;
+        hasMoved = false;
         startX = e.clientX - translateX;
         startY = e.clientY - translateY;
         modalImage.style.cursor = 'grabbing';
@@ -320,6 +377,7 @@
     document.addEventListener('mousemove', function(e) {
       if (isDragging) {
         e.preventDefault();
+        hasMoved = true;
         translateX = e.clientX - startX;
         translateY = e.clientY - startY;
         updateTransform();
@@ -330,6 +388,10 @@
       if (isDragging) {
         isDragging = false;
         modalImage.style.cursor = 'default';
+        // Reset hasMoved after a short delay
+        setTimeout(function() {
+          hasMoved = false;
+        }, 50);
       }
     });
 
