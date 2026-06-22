@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A personal blog with retro Web 1.0 / Frutiger Aero / Y2K vibe." />
+  <title>~ MyCorner ~ :: Compact Edition</title>
+  <link rel="stylesheet" href="style7.css" />
+</head>
+<body>
+  <!-- Aqua sky background -->
+  <div class="page">
+
+    <!-- ===== Header ===== -->
+    <header class="masthead">
+      <div class="header-gloss"></div>
+      <h1 class="logo"><span class="sparkle">✨</span> MyCorner <span class="sparkle">✨</span></h1>
+      <p class="tagline blink">~ dreams, code & pixels since 1999 ~</p>
+    </header>
+
+    <!-- ===== Main layout ===== -->
+    <div class="layout">
+
+      <!-- ----- Sidebar with navigation ----- -->
+      <aside class="sidebar">
+        <!-- Navigation -->
+        <div class="window nav-window">
+          <div class="window-title">🧭 navigation</div>
+          <div class="window-body">
+            <nav class="sidebar-nav">
+              <a href="#home">🏠 Home</a>
+              <a href="#blog">📝 Blog</a>
+              <a href="#about">😎 About</a>
+              <a href="#links">🔗 Links</a>
+              <a href="#guestbook">📖 Guestbook</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window-title">📻 now playing</div>
+          <div class="window-body">
+            <p class="small">♪ vaporwave_mix.mp3</p>
+            <div class="eq"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window-title">🔥 visitor counter</div>
+          <div class="window-body center">
+            <div class="counter" id="counter7">0000000</div>
+            <p class="small">you are visitor #</p>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window-title">🗂️ archives</div>
+          <div class="window-body">
+            <ul class="archive">
+              <li><a href="#">» Dec 2002</a></li>
+              <li><a href="#">» Nov 2002</a></li>
+              <li><a href="#">» Oct 2002</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window-title">💖 webrings</div>
+          <div class="window-body center">
+            <div class="badge">88x31</div>
+            <div class="badge alt">Y2K!</div>
+            <div class="badge">Aero</div>
+            <div class="badge alt">HTML</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ----- Content ----- -->
+      <main class="content">
+
+        <section id="home" class="window">
+          <div class="window-title">★ welcome.html</div>
+          <div class="window-body">
+            <p>Hiya! <b>:)</b> Welcome to <b>MyCorner</b>, my personal slice of cyberspace.</p>
+          </div>
+        </section>
+
+        <section id="blog">
+          <h2 class="section-head">📝 Latest Entries</h2>
+
+          <article class="post window">
+            <div class="window-title">my first blog post!!1</div>
+            <div class="window-body">
+              <p class="meta">📅 Dec 24, 2002 — 🕒 11:58 PM</p>
+              <p>Today I finally learned how to make a <i>frameset</i> AND a rollover button in the same afternoon. The future is officially here.</p>
+              <a href="#" class="aqua-btn">read more »</a>
+            </div>
+          </article>
+
+          <article class="post window">
+            <div class="window-title">thoughts on the new millennium</div>
+            <div class="window-body">
+              <p class="meta">📅 Nov 03, 2002 — 🕒 09:14 PM</p>
+              <p>Bubbly icons, glossy buttons, skies and grass everywhere — I love how shiny everything looks now. This is my aesthetic forever.</p>
+              <a href="#" class="aqua-btn">read more »</a>
+            </div>
+          </article>
+
+          <article class="post window">
+            <div class="window-title">favorite shareware of the month</div>
+            <div class="window-body">
+              <p class="meta">📅 Oct 18, 2002 — 🕒 07:42 PM</p>
+              <p>Made a top-5 list of programs I downloaded over a 56k modem. Includes a media player with visualizations that go BOOM with the bass.</p>
+              <a href="#" class="aqua-btn">read more »</a>
+            </div>
+          </article>
+        </section>
+
+        <section id="about" class="window">
+          <div class="window-title">😎 about me</div>
+          <div class="window-body about">
+            <div class="avatar">🧑‍💻</div>
+            <div>
+              <p><b>name:</b> a friendly netizen<br>
+              <b>likes:</b> gradients, bubbles<br>
+              <b>os:</b> the shiny aqua one<br>
+              <b>mood:</b> <span class="blink">online & vibing</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="links" class="window">
+          <div class="window-title">🔗 cool links</div>
+          <div class="window-body">
+            <ul class="links">
+              <li><a href="#">★ The Web Surfer's Almanac</a></li>
+              <li><a href="#">★ Free GIFs & Glitter Text</a></li>
+              <li><a href="#">★ Build-Your-Own Homepage</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="guestbook" class="window">
+          <div class="window-title">📖 sign my guestbook</div>
+          <div class="window-body">
+            <form onsubmit="addEntry(event)">
+              <label>name:<br><input type="text" id="gb-name" placeholder="kewl_visitor_99" /></label>
+              <label>message:<br><textarea id="gb-msg" rows="2" placeholder="say hi!"></textarea></label>
+              <button type="submit" class="aqua-btn">sign it! ✍️</button>
+            </form>
+            <ul class="guestbook" id="gb-list">
+              <li><b>web_wanderer:</b> luv your site!!</li>
+              <li><b>pixel_pat:</b> the bubbles are mesmerizing 🫧</li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer-gloss"></div>
+      <p><b>© 1999–2002 MyCorner</b> · made with ❤️ · <a href="#home">back to top ↑</a></p>
+      <p class="small">
+        <span class="badge">Valid HTML</span>
+        <span class="badge alt">CSS Powered</span>
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="script7.js"></script>
+</body>
+</html>

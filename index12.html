@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A personal blog with Y2K / Frutiger Aero vibe." />
+  <title>~ Y2KAero ~ :: Scrollable Edition</title>
+  <link rel="stylesheet" href="style12.css" />
+</head>
+<body>
+  <!-- Aqua sky background -->
+  <div class="page">
+
+    <!-- ===== Header ===== -->
+    <header class="masthead">
+      <div class="header-gloss"></div>
+      <h1 class="logo"><span class="sparkle">✨</span> Y2KAero <span class="sparkle">✨</span></h1>
+      <p class="tagline blink">~ future dreams since 1999 ~</p>
+    </header>
+
+    <!-- ===== Main layout ===== -->
+    <div class="layout">
+
+      <!-- ----- Left Sidebar ----- -->
+      <aside class="sidebar-left">
+        <!-- Navigation -->
+        <div class="window nav-window">
+          <div class="window-title">🧭 navigation</div>
+          <div class="window-body">
+            <nav class="sidebar-nav">
+              <a href="#home">🏠 Home</a>
+              <a href="#blog">📝 Blog</a>
+              <a href="#about">😎 About</a>
+              <a href="#links">🔗 Links</a>
+              <a href="#guestbook">📖 Guestbook</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window-title">📻 now playing</div>
+          <div class="window-body">
+            <p class="small">♪ y2k_mix.mp3</p>
+            <div class="eq"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window-title">🔥 visitors</div>
+          <div class="window-body center">
+            <div class="counter" id="counter12">0000000</div>
+            <p class="small">you are visitor #</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ----- Content ----- -->
+      <main class="content">
+
+        <section id="home" class="window">
+          <div class="window-title">🌟 welcome</div>
+          <div class="window-body">
+            <p>Welcome to <b>Y2KAero</b>, my personal homepage celebrating the turn of the millennium with glossy Frutiger Aero aesthetics.</p>
+            <p class="small">Best viewed in Netscape Navigator @ 1024x768</p>
+          </div>
+        </section>
+
+        <section id="blog">
+          <h2 class="section-head">:: latest entries ::</h2>
+
+          <div class="blog-scroll">
+            <article class="post window">
+              <div class="window-title">the future is now</div>
+              <div class="window-body">
+                <p class="meta">Date: Dec 31, 1999 | Time: 11:59 PM</p>
+                <p>As we approach the new millennium, everything feels possible. The digital future is bright with glossy interfaces and chrome dreams.</p>
+                <a href="#" class="aero-btn">[ READ MORE ]</a>
+              </div>
+            </article>
+
+            <article class="post window">
+              <div class="window-title">aero aesthetics</div>
+              <div class="window-body">
+                <p class="meta">Date: Dec 25, 1999 | Time: 03:33 AM</p>
+                <p>Frutiger Aero brings glossy surfaces, floating bubbles, and nature-inspired colors. It's the optimism of the 2000s captured in design.</p>
+                <a href="#" class="aero-btn">[ READ MORE ]</a>
+              </div>
+            </article>
+
+            <article class="post window">
+              <div class="window-title">y2k chrome dreams</div>
+              <div class="window-body">
+                <p class="meta">Date: Dec 20, 1999 | Time: 08:15 AM</p>
+                <p>Metallic interfaces, futuristic fonts, and glowing elements — Y2K design was all about looking ahead to tomorrow.</p>
+                <a href="#" class="aero-btn">[ READ MORE ]</a>
+              </div>
+            </article>
+
+            <article class="post window">
+              <div class="window-title">digital millennium</div>
+              <div class="window-body">
+                <p class="meta">Date: Dec 15, 1999 | Time: 02:22 PM</p>
+                <p>The year 2000 approaches with promises of flying cars and holographic displays. Our digital dreams are becoming reality.</p>
+                <a href="#" class="aero-btn">[ READ MORE ]</a>
+              </div>
+            </article>
+
+            <article class="post window">
+              <div class="window-title">cyber aesthetics</div>
+              <div class="window-body">
+                <p class="meta">Date: Dec 10, 1999 | Time: 11:11 AM</p>
+                <p>Neon lights, chrome surfaces, and futuristic interfaces — cyber aesthetics define the edge of the new millennium.</p>
+                <a href="#" class="aero-btn">[ READ MORE ]</a>
+              </div>
+            </article>
+
+            <article class="post window">
+              <div class="window-title">web evolution</div>
+              <div class="window-body">
+                <p class="meta">Date: Dec 5, 1999 | Time: 04:44 PM</p>
+                <p>From simple text pages to glossy interfaces, the web evolves rapidly. Who knows what the next decade will bring?</p>
+                <a href="#" class="aero-btn">[ READ MORE ]</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="about" class="window">
+          <div class="window-title">👤 about me</div>
+          <div class="window-body about">
+            <div class="avatar">🤖</div>
+            <div>
+              <p><b>Name:</b> CyberSurfer<br>
+              <b>Likes:</b> Y2K, Frutiger Aero, Chrome<br>
+              <b>Status:</b> <span class="blink">ONLINE</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="guestbook" class="window">
+          <div class="window-title">📖 guestbook</div>
+          <div class="window-body">
+            <form onsubmit="addEntry(event)">
+              <label>Name:<br><input type="text" id="gb-name" placeholder="enter name" /></label>
+              <label>Message:<br><textarea id="gb-msg" rows="2" placeholder="say hi!"></textarea></label>
+              <button type="submit" class="aero-btn">[ SIGN IT ]</button>
+            </form>
+            <ul class="guestbook" id="gb-list">
+              <li><b>web_surfer:</b> cool y2k vibes!!</li>
+              <li><b>aero_fan:</b> love the glossy look</li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ----- Right Sidebar ----- -->
+      <aside class="sidebar-right">
+        <div class="window">
+          <div class="window-title">🗂️ archives</div>
+          <div class="window-body">
+            <ul class="archive">
+              <li><a href="#">» Dec 1999</a></li>
+              <li><a href="#">» Nov 1999</a></li>
+              <li><a href="#">» Oct 1999</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window-title">💖 webrings</div>
+          <div class="window-body center">
+            <div class="badge">88x31</div>
+            <div class="badge alt">Y2K!</div>
+            <div class="badge">Aero</div>
+            <div class="badge alt">2000</div>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window-title">🔗 cool links</div>
+          <div class="window-body">
+            <ul class="links">
+              <li><a href="#">★ Yahoo!</a></li>
+              <li><a href="#">★ AltaVista</a></li>
+              <li><a href="#">★ GeoCities</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer-bar"></div>
+      <p>© 1999–2002 Y2KAero · Made with Notepad · <a href="#home">[ BACK TO TOP ]</a></p>
+      <p class="small">
+        <span class="badge">IE 5.0+</span>
+        <span class="badge alt">Netscape</span>
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="script12.js"></script>
+</body>
+</html>

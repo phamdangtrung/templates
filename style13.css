@@ -1,0 +1,787 @@
+/* =========================================================
+   Y2K Sketchbook — 2-Column Blog with Sketchbook + Y2K + Skeuomorphism
+   ========================================================= */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", "Marker Felt", "Chalkboard SE", "Trebuchet MS", sans-serif;
+  color: #1a1a2e;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,200,100,.3), transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(100,200,255,.25), transparent 45%),
+    linear-gradient(135deg, #fef9e7 0%, #f5e6d3 50%, #e8d5c4 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Paper texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,.03) 27px, rgba(0,0,0,.03) 28px);
+  z-index: 0;
+}
+
+/* Sketchy doodles overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 8% 25%, rgba(255,100,150,.15) 3px, transparent 4px),
+    radial-gradient(circle at 92% 15%, rgba(100,200,255,.15) 4px, transparent 5px),
+    radial-gradient(circle at 20% 80%, rgba(255,200,100,.12) 3px, transparent 4px),
+    radial-gradient(circle at 75% 85%, rgba(150,100,255,.1) 5px, transparent 6px);
+  z-index: 0;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+/* ---------- Masthead with Y2K gloss + sketchy border ---------- */
+.masthead {
+  position: relative;
+  text-align: center;
+  margin: 8px 0 12px;
+  padding: 14px 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(220,240,255,.85));
+  border: 3px solid #4a90d9;
+  border-radius: 12px;
+  box-shadow: 
+    0 8px 24px rgba(74,144,217,.3),
+    inset 0 2px 8px rgba(255,255,255,.9),
+    0 0 0 1px rgba(74,144,217,.2);
+  overflow: hidden;
+}
+
+/* Sketchy border effect */
+.masthead::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  background: transparent;
+  border: 2px dashed rgba(74,144,217,.4);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.header-gloss {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,.6), transparent);
+  pointer-events: none;
+}
+
+.logo {
+  position: relative;
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background: linear-gradient(180deg, #00d4ff, #0077ff 40%, #8a5cff 80%, #ff6b9d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 4px rgba(255,255,255,.9);
+  filter: drop-shadow(0 2px 3px rgba(0,119,255,.3));
+}
+
+.sparkle { -webkit-text-fill-color: initial; color: #ffd84d; text-shadow: 0 0 8px #ffd84d; }
+
+.tagline {
+  position: relative;
+  margin: 6px 0 0;
+  color: #2d5a8c;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ---------- Layout (2-column: content left, aside right) ---------- */
+.layout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.content { flex: 1 1 auto; min-width: 0; }
+.aside-right { flex: 0 0 200px; }
+
+/* ---------- Sketch Card (main component) ---------- */
+.sketch-card {
+  margin-bottom: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.97), rgba(250,248,245,.95));
+  border: 3px solid #3d5a80;
+  border-radius: 4px;
+  box-shadow: 
+    4px 4px 0 rgba(61,90,128,.15),
+    0 2px 8px rgba(0,0,0,.08),
+    inset 0 1px 3px rgba(255,255,255,.9);
+  position: relative;
+  transform: rotate(-0.3deg);
+}
+
+.sketch-card:nth-child(even) {
+  transform: rotate(0.2deg);
+}
+
+.sketch-card:nth-child(3n) {
+  transform: rotate(-0.1deg);
+}
+
+/* Tape effect */
+.tape {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 60px;
+  height: 20px;
+  background: linear-gradient(180deg, rgba(255,235,180,.85), rgba(255,220,150,.75));
+  border: 1px solid rgba(200,180,120,.5);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.sketch-header {
+  position: relative;
+  padding: 10px 14px;
+  border-bottom: 2px dashed rgba(61,90,128,.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,.5), transparent);
+}
+
+.sketch-icon {
+  font-size: 22px;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.1));
+}
+
+.sketch-header h2,
+.sketch-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #293241;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sketch-body {
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #293241;
+}
+
+.sketch-body.center { text-align: center; }
+.sketch-body p { margin: 0 0 8px; }
+
+.sketch-note {
+  font-size: 11px;
+  color: #666;
+  font-style: italic;
+  margin: 4px 0;
+}
+
+.sketch-meta {
+  font-size: 11px;
+  color: #555;
+  border-bottom: 1px dashed rgba(61,90,128,.3);
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+/* ---------- Sketch Navigation ---------- */
+.sketch-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #293241;
+  padding: 8px 14px;
+  border: 2px solid #3d5a80;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #fff, #f5f0e6);
+  box-shadow: 2px 2px 0 rgba(61,90,128,.2);
+  transition: all .2s ease;
+  transform: rotate(-1deg);
+}
+
+.nav-item:nth-child(2) { transform: rotate(1deg); }
+.nav-item:nth-child(3) { transform: rotate(-0.5deg); }
+.nav-item:nth-child(4) { transform: rotate(0.5deg); }
+
+.nav-item:hover {
+  background: linear-gradient(180deg, #4a90d9, #3d7ab8);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 0 rgba(61,90,128,.3);
+}
+
+/* ---------- Sketch Title ---------- */
+.sketch-title {
+  color: #3d5a80;
+  margin: 0 0 12px;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 3px double rgba(61,90,128,.3);
+  padding-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+/* ---------- Small text ---------- */
+.small { font-size: 11px; color: #0a4d8c; }
+
+/* ---------- Counter (Y2K LED style) ---------- */
+.counter {
+  display: inline-block;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #00ff66;
+  background: linear-gradient(180deg, #001a00, #000a00);
+  padding: 6px 12px;
+  border: 3px inset #003300;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00ff66, inset 0 0 5px rgba(0,255,102,.3);
+}
+
+/* ---------- Equalizer ---------- */
+.eq { display: flex; gap: 4px; height: 20px; align-items: flex-end; margin-top: 6px; }
+.eq span {
+  width: 6px;
+  background: linear-gradient(180deg, #ff6600, #ffcc00);
+  border: 2px solid #cc6600;
+  border-radius: 3px;
+  animation: bounce 1s infinite ease-in-out;
+}
+.eq span:nth-child(2){ animation-delay:.2s }
+.eq span:nth-child(3){ animation-delay:.4s }
+.eq span:nth-child(4){ animation-delay:.6s }
+.eq span:nth-child(5){ animation-delay:.8s }
+@keyframes bounce { 0%,100%{height:6px} 50%{height:20px} }
+
+/* ---------- Archive ---------- */
+.archive { list-style: none; margin: 0; padding: 0; font-size: 12px; }
+.archive a { color: #4a90d9; text-decoration: none; }
+.archive a:hover { text-decoration: underline; color: #ff6b35; }
+
+/* ---------- Post Navigation ---------- */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav-prev, .nav-next {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-prev .sketch-note, .nav-next .sketch-note {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+/* ---------- Tags ---------- */
+.post-tags {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(61,90,128,.3);
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-link {
+  font-size: 10px;
+  color: #4a90d9;
+  text-decoration: none;
+  padding: 2px 6px;
+  background: linear-gradient(180deg, #fff, #f5f0e6);
+  border: 1px solid #3d5a80;
+  border-radius: 3px;
+}
+
+.tag-link:hover {
+  background: linear-gradient(180deg, #4a90d9, #3d7ab8);
+  color: #fff;
+  border-color: #2d5a8c;
+}
+
+/* ---------- Code Block ---------- */
+.code-block {
+  background: linear-gradient(180deg, #2d2d3a, #1a1a2e);
+  border: 2px dashed rgba(61,90,128,.5);
+  border-radius: 4px;
+  padding: 12px;
+  margin: 10px 0;
+  overflow-x: auto;
+  transform: rotate(-0.5deg);
+}
+
+.code-block code {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  color: #00ff66;
+  line-height: 1.5;
+}
+
+/* ---------- Gallery Grid ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.gallery-item {
+  padding: 12px;
+  margin-bottom: 0;
+}
+
+.gallery-item .sketch-header {
+  display: none;
+}
+
+.gallery-item .sketch-body {
+  padding: 0;
+}
+
+/* ---------- Polaroid Style ---------- */
+.polaroid {
+  background: linear-gradient(180deg, #fff, #f5f0e6);
+  padding: 12px 12px 30px 12px;
+  border-radius: 2px;
+  box-shadow: 3px 3px 0 rgba(61,90,128,.2);
+  transform: rotate(-1deg);
+  transition: transform .2s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 4px 4px 0 rgba(61,90,128,.3);
+}
+
+.gallery-item:nth-child(even) .polaroid {
+  transform: rotate(1deg);
+}
+
+.gallery-item:nth-child(even) .polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.polaroid-photo {
+  background: linear-gradient(180deg, #e8e0d0, #d4c8b8);
+  border: 3px solid #3d5a80;
+  border-radius: 2px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.placeholder-image {
+  font-size: 48px;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.1));
+}
+
+.polaroid-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.handwritten {
+  font-family: "Comic Sans MS", "Marker Felt", "Chalkboard SE", cursive;
+  color: #293241;
+  font-size: 13px;
+}
+
+.handwritten.small {
+  font-size: 11px;
+  color: #666;
+}
+
+/* ---------- Polaroid Photo Images ---------- */
+.polaroid-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.polaroid-photo img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Modal ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 50, 80, 0.4);
+  backdrop-filter: blur(2px);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(250,248,245,.9));
+  border: 3px solid #3d5a80;
+  border-radius: 8px;
+  box-shadow: 
+    6px 6px 0 rgba(61,90,128,.2),
+    0 8px 24px rgba(0,0,0,.3),
+    inset 0 2px 6px rgba(255,255,255,.9);
+}
+
+.modal-content::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  background: transparent;
+  border: 2px dashed rgba(61,90,128,.4);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.modal-close {
+  position: absolute;
+  top: -50px;
+  right: 10px;
+  color: #3d5a80;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .2s ease;
+  background: linear-gradient(180deg, #fff, #f5f0e6);
+  border: 2px solid #3d5a80;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #fff;
+  background: linear-gradient(180deg, #4a90d9, #3d7ab8);
+  border-color: #2d5a8c;
+  transform: rotate(90deg);
+}
+
+.modal-image-container {
+  max-width: 100%;
+  max-height: 75vh;
+  overflow: auto;
+  border: 3px solid #3d5a80;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #f5f0e6, #e8e0d0);
+  padding: 10px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.1);
+}
+
+.modal-image-container img {
+  max-width: 100%;
+  max-height: 70vh;
+  display: block;
+  transition: transform .3s ease;
+  border: 2px solid rgba(61,90,128,.3);
+}
+
+.modal-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.modal-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(180deg, #4a90d9, #3d7ab8);
+  border: 2px solid #2d5a8c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.modal-btn:hover {
+  background: linear-gradient(180deg, #5ba0e9, #4e8ac8);
+  transform: translateY(-2px);
+}
+
+/* Archive toggle button */
+.archive-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 2px solid #3d5a80;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #293241;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.archive-toggle:hover {
+  background: linear-gradient(180deg, #4a90d9, #3d7ab8);
+  color: #fff;
+  border-color: #2d5a8c;
+}
+
+/* Archive collapsed state */
+#archive-body.collapsed {
+  display: none;
+}
+
+#archive-body.collapsed + .archive-toggle::after {
+  content: "[+]";
+}
+
+/* ---------- Badges (Y2K style) ---------- */
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
+  padding: 3px 8px;
+  margin: 3px;
+  background: linear-gradient(180deg, #ffd84d, #ff9d2f);
+  border: 2px outset #ffe680;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 rgba(0,0,0,.1);
+}
+
+.badge.alt {
+  background: linear-gradient(180deg, #ff6b9d, #c44569);
+  border-color: #ff9dbf;
+}
+
+/* ---------- Sketch Button ---------- */
+.sketch-btn {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 14px;
+  font-weight: bold;
+  font-size: 11px;
+  text-decoration: none;
+  color: #293241;
+  background: linear-gradient(180deg, #ffd84d, #ff9d2f);
+  border: 2px solid #cc7a20;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 rgba(0,0,0,.15);
+  transition: all .2s ease;
+}
+
+.sketch-btn:hover {
+  background: linear-gradient(180deg, #ffe066, #ffb347);
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 rgba(0,0,0,.2);
+}
+
+#about {
+  margin-top: 16px;
+}
+
+/* ---------- Blog scroll container ---------- */
+.blog-scroll {
+  max-height: 450px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.blog-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.blog-scroll::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #f5f0e6, #e8e0d0);
+  border-radius: 5px;
+  border: 2px solid #d4c8b8;
+}
+
+.blog-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4a90d9, #3d7ab8);
+  border-radius: 5px;
+  border: 2px solid #2d5a8c;
+}
+
+.blog-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5ba0e9, #4e8ac8);
+}
+
+/* ---------- About ---------- */
+.about { display: flex; gap: 12px; align-items: center; }
+.about-info { flex: 1; }
+
+.sketch-avatar {
+  font-size: 36px;
+  background: linear-gradient(135deg, #e8e0d0, #d4c8b8);
+  border-radius: 50%;
+  padding: 10px;
+  border: 3px solid #3d5a80;
+  box-shadow: 3px 3px 0 rgba(61,90,128,.2);
+}
+
+/* ---------- Links ---------- */
+.links { list-style: none; margin: 0; padding: 0; }
+.links li { margin-bottom: 6px; }
+.links a { color: #4a90d9; text-decoration: none; font-weight: bold; font-size: 12px; }
+.links a:hover { color: #ff6b35; text-decoration: underline; }
+
+/* ---------- Form ---------- */
+form label { display: block; font-size: 12px; color: #3d5a80; margin-bottom: 6px; font-weight: bold; }
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 2px solid #3d5a80;
+  background: #fff;
+  color: #293241;
+  font-family: inherit;
+  font-size: 13px;
+  border-radius: 4px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.05);
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #4a90d9;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.05), 0 0 0 3px rgba(74,144,217,.2);
+}
+
+/* ---------- Guestbook ---------- */
+.guestbook { list-style: none; padding: 0; margin: 12px 0 0; font-size: 12px; }
+.guestbook li {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: linear-gradient(180deg, #fff, #f5f0e6);
+  border-radius: 4px;
+  border: 2px dashed rgba(61,90,128,.3);
+  transform: rotate(0.5deg);
+}
+
+.guestbook li:nth-child(even) {
+  transform: rotate(-0.3deg);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  text-align: center;
+  margin-top: 16px;
+  padding: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(240,235,225,.9));
+  border-radius: 8px;
+  border: 3px solid #3d5a80;
+  box-shadow: 0 4px 16px rgba(61,90,128,.2);
+}
+
+.footer-bar {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ffd84d, transparent);
+  margin-bottom: 8px;
+}
+
+.footer p { margin: 4px 0; color: #3d5a80; font-size: 12px; }
+.footer a { color: #4a90d9; text-decoration: none; font-weight: bold; }
+.footer a:hover { text-decoration: underline; color: #ff6b35; }
+
+/* ---------- Effects ---------- */
+.blink { animation: blink 1s steps(2, start) infinite; }
+@keyframes blink { to { visibility: hidden; } }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  
+  .aside-right {
+    width: 100%;
+  }
+  
+  .sketch-nav {
+    justify-content: center;
+  }
+  
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .sketch-card {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 8px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .masthead {
+    padding: 10px 8px;
+  }
+  
+  .sketch-nav {
+    flex-direction: column;
+  }
+  
+  .nav-item {
+    text-align: center;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A personal blog with Web 1.0 / 90s / Y2K aesthetics." />
+  <title>~ CyberCorner ~ :: Web 1.0 Edition</title>
+  <link rel="stylesheet" href="style8.css" />
+</head>
+<body>
+  <!-- Starfield background -->
+  <div class="starfield"></div>
+
+  <div class="page">
+
+    <!-- ===== Header ===== -->
+    <header class="masthead">
+      <h1 class="logo"><span class="star">★</span> CyberCorner <span class="star">★</span></h1>
+      <p class="tagline blink">~ surfing the web since 1999 ~</p>
+    </header>
+
+    <!-- ===== Main layout ===== -->
+    <div class="layout">
+
+      <!-- ----- Sidebar with navigation ----- -->
+      <aside class="sidebar">
+        <!-- Navigation -->
+        <div class="panel nav-panel">
+          <div class="panel-title">[ NAVIGATION ]</div>
+          <div class="panel-body">
+            <nav class="sidebar-nav">
+              <a href="#home">► Home</a>
+              <a href="#blog">► Blog</a>
+              <a href="#about">► About</a>
+              <a href="#links">► Links</a>
+              <a href="#guestbook">► Guestbook</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">[ NOW PLAYING ]</div>
+          <div class="panel-body">
+            <p class="small">♪ techno_mix.mp3</p>
+            <div class="eq"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">[ VISITOR COUNT ]</div>
+          <div class="panel-body center">
+            <div class="counter" id="counter8">0000000</div>
+            <p class="small">you are visitor #</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">[ ARCHIVES ]</div>
+          <div class="panel-body">
+            <ul class="archive">
+              <li><a href="#">» Dec 2002</a></li>
+              <li><a href="#">» Nov 2002</a></li>
+              <li><a href="#">» Oct 2002</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">[ WEBRINGS ]</div>
+          <div class="panel-body center">
+            <div class="badge">88x31</div>
+            <div class="badge alt">Y2K!</div>
+            <div class="badge">90s</div>
+            <div class="badge alt">HTML</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ----- Content ----- -->
+      <main class="content">
+
+        <section id="home" class="panel">
+          <div class="panel-title">[ WELCOME ]</div>
+          <div class="panel-body">
+            <p>Welcome to <b>CyberCorner</b>, my personal homepage on the World Wide Web!</p>
+            <p class="small">Best viewed in Netscape Navigator @ 800x600</p>
+          </div>
+        </section>
+
+        <section id="blog">
+          <h2 class="section-head">:: LATEST ENTRIES ::</h2>
+
+          <article class="post panel">
+            <div class="panel-title">my first webpage!!1</div>
+            <div class="panel-body">
+              <p class="meta">Date: Dec 24, 2002 | Time: 11:58 PM</p>
+              <p>Today I finally learned HTML! I made my first webpage with a marquee and some blinking text. The future is officially here.</p>
+              <a href="#" class="retro-btn">[ READ MORE ]</a>
+            </div>
+          </article>
+
+          <article class="post panel">
+            <div class="panel-title">thoughts on y2k</div>
+            <div class="panel-body">
+              <p class="meta">Date: Nov 03, 2002 | Time: 09:14 PM</p>
+              <p>Everyone was worried about computers crashing but everything turned out fine. Now we have shiny interfaces and the internet everywhere!</p>
+              <a href="#" class="retro-btn">[ READ MORE ]</a>
+            </div>
+          </article>
+
+          <article class="post panel">
+            <div class="panel-title">favorite sites</div>
+            <div class="panel-body">
+              <p class="meta">Date: Oct 18, 2002 | Time: 07:42 PM</p>
+              <p>I've been surfing the web and found some cool sites. Yahoo, AltaVista, and this awesome GeoCities page with dancing hamsters!</p>
+              <a href="#" class="retro-btn">[ READ MORE ]</a>
+            </div>
+          </article>
+        </section>
+
+        <section id="about" class="panel">
+          <div class="panel-title">[ ABOUT ME ]</div>
+          <div class="panel-body about">
+            <div class="avatar">👤</div>
+            <div>
+              <p><b>Name:</b> CyberSurfer<br>
+              <b>Likes:</b> HTML, surfing the web<br>
+              <b>Computer:</b> Pentium III<br>
+              <b>Status:</b> <span class="blink">ONLINE</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="links" class="panel">
+          <div class="panel-title">[ COOL LINKS ]</div>
+          <div class="panel-body">
+            <ul class="links">
+              <li><a href="#">★ Yahoo!</a></li>
+              <li><a href="#">★ AltaVista</a></li>
+              <li><a href="#">★ GeoCities</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="guestbook" class="panel">
+          <div class="panel-title">[ GUESTBOOK ]</div>
+          <div class="panel-body">
+            <form onsubmit="addEntry(event)">
+              <label>Name:<br><input type="text" id="gb-name" placeholder="enter name" /></label>
+              <label>Message:<br><textarea id="gb-msg" rows="2" placeholder="say hi!"></textarea></label>
+              <button type="submit" class="retro-btn">[ SIGN IT ]</button>
+            </form>
+            <ul class="guestbook" id="gb-list">
+              <li><b>web_surfer:</b> cool page!!</li>
+              <li><b>net_ninja:</b> love the 90s vibe</li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer-bar"></div>
+      <p>© 1999–2002 AquaCorner · Made with TextEdit · <a href="#home">[ BACK TO TOP ]</a></p>
+      <p class="small">
+        <span class="badge">Safari</span>
+        <span class="badge alt">Aqua</span>
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="script8.js"></script>
+</body>
+</html>

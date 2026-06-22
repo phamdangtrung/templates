@@ -1,0 +1,692 @@
+/* =========================================================
+   Windows XP/7/Vista Frutiger Aero Concept
+   ========================================================= */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Tahoma", "Segoe UI", sans-serif;
+  color: #000;
+  background: #005a9e;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ---------- Classic XP Bliss Wallpaper ---------- */
+.desktop {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, #4a90c2 0%, #5ba3d4 20%, #7ec0e8 40%, #8ad4f0 50%, #6bcf5b 55%, #5ab84a 65%, #4a9f3a 75%, #3a8a2a 85%, #2a751a 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Clouds */
+.desktop::before {
+  content: "";
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  height: 80px;
+  background: radial-gradient(ellipse, rgba(255,255,255,.8), transparent);
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: .6;
+}
+
+.desktop::after {
+  content: "";
+  position: fixed;
+  top: 15%;
+  right: 15%;
+  width: 250px;
+  height: 100px;
+  background: radial-gradient(ellipse, rgba(255,255,255,.7), transparent);
+  border-radius: 50%;
+  filter: blur(25px);
+  opacity: .5;
+}
+
+/* ---------- Taskbar ---------- */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(180deg, #245edb 0%, #1941a5 50%, #1941a5 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,.3);
+}
+
+.start-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: linear-gradient(180deg, #3c8df3 0%, #1a5fc9 50%, #1349a0 100%);
+  border: 1px solid #0f3d8c;
+  border-radius: 0 8px 8px 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3);
+}
+
+.start-icon { font-size: 14px; }
+
+.taskbar-apps {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  padding: 0 8px;
+}
+
+.taskbar-app {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: linear-gradient(180deg, #3c8df3 0%, #1a5fc9 50%, #1349a0 100%);
+  border: 1px solid #0f3d8c;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.taskbar-app.active {
+  background: linear-gradient(180deg, #1a5fc9 0%, #1349a0 50%, #0f3d8c 100%);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.3);
+}
+
+.app-icon { font-size: 12px; }
+
+.system-tray {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  background: rgba(0,0,0,.2);
+  border-radius: 4px;
+  height: 28px;
+}
+
+.tray-icon { font-size: 12px; }
+
+.clock {
+  font-size: 11px;
+  color: #fff;
+}
+
+/* ---------- Window ---------- */
+.window-container {
+  padding: 20px;
+  padding-bottom: 60px;
+}
+
+.window {
+  background: #ece9d8;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,.4), 0 0 0 1px rgba(0,0,0,.2);
+  overflow: hidden;
+}
+
+/* Title bar */
+.title-bar {
+  background: linear-gradient(180deg, #0058ee 0%, #2459c7 40%, #1941a5 100%);
+  padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.window-icon { font-size: 14px; }
+
+.window-title {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+.title-bar-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.control-btn {
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(180deg, #fff 0%, #d4d0c8 100%);
+  border: 1px solid #000;
+  box-shadow: inset 0 1px 0 #fff;
+}
+
+.control-btn.close {
+  background: linear-gradient(180deg, #e07860 0%, #c04020 100%);
+  color: #fff;
+}
+
+/* Menu bar */
+.menu-bar {
+  background: linear-gradient(180deg, #fff 0%, #ece9d8 100%);
+  padding: 2px 8px;
+  border-bottom: 1px solid #aca899;
+  display: flex;
+  gap: 4px;
+}
+
+.menu-item {
+  font-size: 11px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: #316ac5;
+  color: #fff;
+}
+
+/* Address bar */
+.address-bar {
+  background: linear-gradient(180deg, #fff 0%, #ece9d8 100%);
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #aca899;
+}
+
+.address-label {
+  font-size: 11px;
+  color: #666;
+}
+
+.address-input {
+  flex: 1;
+  padding: 3px 8px;
+  font-size: 12px;
+  border: 2px inset #aca899;
+  background: #fff;
+}
+
+.go-btn {
+  padding: 3px 12px;
+  font-size: 11px;
+  font-weight: bold;
+  background: linear-gradient(180deg, #f0f0f0 0%, #d4d0c8 100%);
+  border: 2px outset #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Window content */
+.window-content {
+  background: #fff;
+  min-height: 500px;
+}
+
+/* ---------- Page header with gloss ---------- */
+.page-header {
+  position: relative;
+  background: linear-gradient(180deg, #6bcf5b 0%, #5ab84a 30%, #4a9f3a 100%);
+  padding: 30px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.header-gloss {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(180deg, rgba(255,255,255,.4), transparent);
+  pointer-events: none;
+}
+
+.main-title {
+  position: relative;
+  margin: 0;
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,.4), 0 0 20px rgba(255,255,255,.3);
+}
+
+.subtitle {
+  position: relative;
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #e8f5e8;
+  text-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+/* ---------- Toolbar ---------- */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 100%);
+  border-bottom: 1px solid #ccc;
+}
+
+.tool-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 11px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: linear-gradient(180deg, #fff 0%, #e8e8e8 100%);
+  transition: all .1s ease;
+}
+
+.tool-btn:hover {
+  background: linear-gradient(180deg, #e8f4fc 0%, #c4e5f6 100%);
+  border-color: #7da2ce;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.tool-icon { font-size: 20px; margin-bottom: 4px; }
+
+/* ---------- Content layout ---------- */
+.content-layout {
+  display: flex;
+  gap: 0;
+  min-height: 400px;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 200px;
+  background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 100%);
+  border-right: 1px solid #ccc;
+}
+
+.sidebar-panel {
+  border-bottom: 1px solid #ccc;
+}
+
+.panel-header {
+  background: linear-gradient(180deg, #4a90c2 0%, #3a7ab2 100%);
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.panel-header.glass {
+  background: linear-gradient(180deg, rgba(74,144,194,.9), rgba(58,122,178,.9));
+  backdrop-filter: blur(10px);
+}
+
+.panel-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 10px;
+  font-size: 11px;
+}
+
+.panel-list li {
+  padding: 4px 0;
+}
+
+.panel-list a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.panel-list a:hover {
+  text-decoration: underline;
+}
+
+.panel-content {
+  padding: 10px;
+  font-size: 11px;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.stat-label { color: #666; }
+.stat-value { font-weight: bold; color: #0066cc; }
+
+/* Mini calendar */
+.mini-calendar {
+  text-align: center;
+}
+
+.cal-month {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #0066cc;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  font-size: 10px;
+}
+
+.cal-grid span {
+  padding: 2px;
+}
+
+.cal-today {
+  background: #ffffcc;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* ---------- Main content ---------- */
+.main-content {
+  flex: 1;
+  padding: 16px;
+  background: #fff;
+}
+
+.content-panel {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.panel-body {
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.section-header {
+  font-size: 18px;
+  color: #0066cc;
+  border-bottom: 2px solid #e8e8e8;
+  padding-bottom: 8px;
+  margin: 0 0 16px;
+}
+
+/* ---------- Posts ---------- */
+.post {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.post-header {
+  padding: 10px 14px;
+  background: linear-gradient(180deg, #f0f8ff 0%, #e0f0ff 100%);
+  border-bottom: 1px solid #ccc;
+}
+
+.post-header.glass {
+  background: linear-gradient(180deg, rgba(74,144,194,.15), rgba(58,122,178,.1));
+  backdrop-filter: blur(5px);
+}
+
+.post-header h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #0066cc;
+}
+
+.post-date {
+  font-size: 11px;
+  color: #666;
+}
+
+.post-body {
+  padding: 14px;
+}
+
+.post-body p {
+  margin: 0 0 12px;
+}
+
+.read-more {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* ---------- About section ---------- */
+.about-body {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.avatar-xp {
+  flex-shrink: 0;
+}
+
+.avatar-frame {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4a90c2, #2a5082);
+  border-radius: 8px;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-emoji {
+  font-size: 40px;
+}
+
+.about-info {
+  flex: 1;
+}
+
+.about-info p {
+  margin: 0 0 8px;
+}
+
+/* ---------- Gallery ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #e8e8e8, #d0d0d0);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  border: 1px solid #ccc;
+}
+
+.gallery-caption {
+  display: block;
+  font-size: 11px;
+  margin-top: 6px;
+  color: #666;
+}
+
+/* ---------- Contact form ---------- */
+.form-row {
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 12px;
+  border: 2px inset #ccc;
+  border-radius: 2px;
+  font-family: inherit;
+}
+
+.xp-button {
+  padding: 8px 24px;
+  font-size: 12px;
+  font-weight: bold;
+  background: linear-gradient(180deg, #4a90c2 0%, #3a7ab2 50%, #2a6aa2 100%);
+  color: #fff;
+  border: 1px solid #1a5a92;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 2px 4px rgba(0,0,0,.2);
+}
+
+.xp-button:hover {
+  background: linear-gradient(180deg, #5aa0d2 0%, #4a8ac2 50%, #3a7aa2 100%);
+}
+
+/* ---------- Welcome badges ---------- */
+.welcome-badges {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.xp-badge,
+.vista-badge,
+.win7-badge {
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,.3);
+}
+
+.xp-badge {
+  background: linear-gradient(180deg, #3c8df3, #1a5fc9);
+}
+
+.vista-badge {
+  background: linear-gradient(180deg, #6bcf5b, #4a9f3a);
+}
+
+.win7-badge {
+  background: linear-gradient(180deg, #ff6b6b, #c44);
+}
+
+/* ---------- Status bar ---------- */
+.status-bar {
+  background: linear-gradient(180deg, #ece9d8 0%, #d4d0c8 100%);
+  padding: 4px 8px;
+  font-size: 11px;
+  display: flex;
+  gap: 20px;
+  border-top: 1px solid #aca899;
+}
+
+.status-zone {
+  color: #0066cc;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .content-layout {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .toolbar {
+    justify-content: center;
+  }
+  
+  .tool-btn {
+    flex: 1 1 auto;
+    min-width: 60px;
+  }
+  
+  .about-body {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .address-bar {
+    flex-wrap: wrap;
+  }
+  
+  .address-input {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .taskbar-apps {
+    display: none;
+  }
+  
+  .system-tray {
+    padding: 0 4px;
+  }
+  
+  .clock {
+    font-size: 10px;
+  }
+  
+  .main-title {
+    font-size: 24px;
+  }
+  
+  .window-container {
+    padding: 10px;
+    padding-bottom: 50px;
+  }
+}

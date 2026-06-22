@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Digital Space :: Windows XP Edition</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+<body>
+  <!-- Desktop background -->
+  <div class="desktop">
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+      <div class="start-button">
+        <span class="start-icon">⊞</span>
+        <span>start</span>
+      </div>
+      <div class="taskbar-apps">
+        <div class="taskbar-app active">
+          <span class="app-icon">🌐</span>
+          <span>My Digital Space</span>
+        </div>
+      </div>
+      <div class="system-tray">
+        <span class="tray-icon">🔊</span>
+        <span class="clock" id="clock">12:00 PM</span>
+      </div>
+    </div>
+
+    <!-- Main Window -->
+    <div class="window-container">
+      <div class="window">
+        <!-- Title bar -->
+        <div class="title-bar">
+          <div class="title-bar-left">
+            <span class="window-icon">🌐</span>
+            <span class="window-title">My Digital Space - Microsoft Internet Explorer</span>
+          </div>
+          <div class="title-bar-controls">
+            <button class="control-btn minimize">─</button>
+            <button class="control-btn maximize">□</button>
+            <button class="control-btn close">✕</button>
+          </div>
+        </div>
+
+        <!-- Menu bar -->
+        <div class="menu-bar">
+          <span class="menu-item">File</span>
+          <span class="menu-item">Edit</span>
+          <span class="menu-item">View</span>
+          <span class="menu-item">Favorites</span>
+          <span class="menu-item">Tools</span>
+          <span class="menu-item">Help</span>
+        </div>
+
+        <!-- Address bar -->
+        <div class="address-bar">
+          <span class="address-label">Address</span>
+          <input type="text" class="address-input" value="http://www.mydigitalspace.com/index.html" readonly />
+          <button class="go-btn">Go</button>
+        </div>
+
+        <!-- Content area -->
+        <div class="window-content">
+          
+          <!-- Header with gloss -->
+          <header class="page-header">
+            <div class="header-gloss"></div>
+            <h1 class="main-title">My Digital Space</h1>
+            <p class="subtitle">Welcome to my corner of the World Wide Web</p>
+          </header>
+
+          <!-- Navigation toolbar -->
+          <nav class="toolbar">
+            <a href="#home" class="tool-btn">
+              <span class="tool-icon">🏠</span>
+              <span>Home</span>
+            </a>
+            <a href="#blog" class="tool-btn">
+              <span class="tool-icon">📝</span>
+              <span>Blog</span>
+            </a>
+            <a href="#about" class="tool-btn">
+              <span class="tool-icon">👤</span>
+              <span>About</span>
+            </a>
+            <a href="#gallery" class="tool-btn">
+              <span class="tool-icon">🖼️</span>
+              <span>Gallery</span>
+            </a>
+            <a href="#contact" class="tool-btn">
+              <span class="tool-icon">✉️</span>
+              <span>Contact</span>
+            </a>
+          </nav>
+
+          <!-- Main layout -->
+          <div class="content-layout">
+            
+            <!-- Sidebar -->
+            <aside class="sidebar">
+              <div class="sidebar-panel">
+                <div class="panel-header">Quick Links</div>
+                <ul class="panel-list">
+                  <li><a href="#">» Latest Posts</a></li>
+                  <li><a href="#">» Archives</a></li>
+                  <li><a href="#">» RSS Feed</a></li>
+                  <li><a href="#">» Sitemap</a></li>
+                </ul>
+              </div>
+
+              <div class="sidebar-panel">
+                <div class="panel-header">Statistics</div>
+                <div class="panel-content">
+                  <div class="stat-row">
+                    <span class="stat-label">Visitors:</span>
+                    <span class="stat-value" id="visitor-count">0</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Posts:</span>
+                    <span class="stat-value">42</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Comments:</span>
+                    <span class="stat-value">128</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-panel">
+                <div class="panel-header">Calendar</div>
+                <div class="panel-content mini-calendar">
+                  <div class="cal-month">December 2002</div>
+                  <div class="cal-grid">
+                    <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                    <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+                    <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+                    <span>22</span><span>23</span><span class="cal-today">24</span><span>25</span><span>26</span><span>27</span><span>28</span>
+                    <span>29</span><span>30</span><span>31</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Main content -->
+            <main class="main-content">
+              
+              <section id="home" class="content-panel">
+                <div class="panel-header glass">Welcome</div>
+                <div class="panel-body">
+                  <p>Welcome to my personal website! This is my digital space where I share my thoughts, projects, and interests. Feel free to explore and leave a comment!</p>
+                  <div class="welcome-badges">
+                    <span class="xp-badge">XP</span>
+                    <span class="vista-badge">Vista</span>
+                    <span class="win7-badge">7</span>
+                  </div>
+                </div>
+              </section>
+
+              <section id="blog">
+                <h2 class="section-header">Blog Posts</h2>
+
+                <article class="post">
+                  <div class="post-header glass">
+                    <h3>My New Website Design</h3>
+                    <span class="post-date">December 24, 2002</span>
+                  </div>
+                  <div class="post-body">
+                    <p>Finally redesigned my website with a Windows XP-inspired theme! I love the glossy buttons, the glass effects, and that classic green hill background. It brings back such great memories.</p>
+                    <p>The Frutiger Aero aesthetic really speaks to me — that perfect blend of nature and technology. The bubbles, the glossy surfaces, the bright colors... it's like optimism in visual form.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header glass">
+                    <h3>Exploring Web Design Trends</h3>
+                    <span class="post-date">December 18, 2002</span>
+                  </div>
+                  <div class="post-body">
+                    <p>Been researching different web design eras lately. From the early Web 1.0 days to the Y2K aesthetic with all its chrome and futuristic elements, to the clean Frutiger Aero style. Each era has its own charm.</p>
+                    <p>I think my favorite is the mid-2000s Aero look — it felt like the future had finally arrived, but in a friendly, approachable way.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                  </div>
+                </article>
+
+                <article class="post">
+                  <div class="post-header glass">
+                    <h3>Weekend Project: Digital Art</h3>
+                    <span class="post-date">December 10, 2002</span>
+                  </div>
+                  <div class="post-body">
+                    <p>Spent the weekend creating some digital art pieces inspired by the Windows Vista wallpaper. There's something so calming about those rolling green hills and blue skies with fluffy clouds.</p>
+                    <a href="#" class="read-more">Read more →</a>
+                  </div>
+                </article>
+              </section>
+
+              <section id="about" class="content-panel">
+                <div class="panel-header glass">About Me</div>
+                <div class="panel-body about-body">
+                  <div class="avatar-xp">
+                    <div class="avatar-frame">
+                      <span class="avatar-emoji">👨‍💻</span>
+                    </div>
+                  </div>
+                  <div class="about-info">
+                    <p><strong>Name:</strong> Digital Explorer</p>
+                    <p><strong>Location:</strong> Cyberspace</p>
+                    <p><strong>Interests:</strong> Web design, retro computing, digital art</p>
+                    <p><strong>Favorite OS:</strong> Windows XP Professional</p>
+                    <p>I've been building websites since the dial-up days. This site is my tribute to the golden era of personal computing and web design.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section id="gallery" class="content-panel">
+                <div class="panel-header glass">Gallery</div>
+                <div class="panel-body">
+                  <div class="gallery-grid">
+                    <div class="gallery-item">
+                      <div class="gallery-placeholder">🖼️</div>
+                      <span class="gallery-caption">Screenshot 1</span>
+                    </div>
+                    <div class="gallery-item">
+                      <div class="gallery-placeholder">🖼️</div>
+                      <span class="gallery-caption">Screenshot 2</span>
+                    </div>
+                    <div class="gallery-item">
+                      <div class="gallery-placeholder">🖼️</div>
+                      <span class="gallery-caption">Screenshot 3</span>
+                    </div>
+                    <div class="gallery-item">
+                      <div class="gallery-placeholder">🖼️</div>
+                      <span class="gallery-caption">Screenshot 4</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section id="contact" class="content-panel">
+                <div class="panel-header glass">Contact</div>
+                <div class="panel-body">
+                  <form onsubmit="submitContact(event)">
+                    <div class="form-row">
+                      <label>Name:</label>
+                      <input type="text" id="contact-name" placeholder="Your name" />
+                    </div>
+                    <div class="form-row">
+                      <label>Email:</label>
+                      <input type="email" id="contact-email" placeholder="your@email.com" />
+                    </div>
+                    <div class="form-row">
+                      <label>Message:</label>
+                      <textarea id="contact-msg" rows="4" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="xp-button">Send Message</button>
+                  </form>
+                </div>
+              </section>
+
+            </main>
+          </div>
+
+          <!-- Status bar -->
+          <div class="status-bar">
+            <span>Done</span>
+            <span class="status-zone">Internet</span>
+            <span class="status-zone">Local Intranet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script3.js"></script>
+</body>
+</html>

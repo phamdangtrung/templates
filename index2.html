@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>~ sarah's space ~ :: my digital diary</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="paper">
+
+    <!-- ===== Personal header ===== -->
+    <header class="header">
+      <div class="polaroid">
+        <div class="photo-placeholder">📸</div>
+        <p class="caption">me, summer '02</p>
+      </div>
+      <div class="intro">
+        <h1 class="handwritten">sarah's space</h1>
+        <p class="mood">current mood: <span class="mood-emoji">🌙</span> dreamy</p>
+        <p class="tagline">a little corner for my thoughts, dreams &amp; ramblings</p>
+      </div>
+    </header>
+
+    <!-- ===== Navigation as sticky notes ===== -->
+    <nav class="sticky-notes">
+      <a href="#diary" class="note pink">📖 diary</a>
+      <a href="#about" class="note yellow">🌸 about</a>
+      <a href="#favorites" class="note blue">💫 favorites</a>
+      <a href="#guestbook" class="note green">💌 say hi</a>
+    </nav>
+
+    <!-- ===== Main content ===== -->
+    <main class="main">
+
+      <!-- ----- Diary entries ----- -->
+      <section id="diary">
+        <h2 class="section-title">📖 diary entries</h2>
+
+        <article class="entry">
+          <div class="entry-header">
+            <span class="date">december 24, 2002</span>
+            <span class="time">11:58 pm</span>
+            <span class="weather">❄️ snowing</span>
+          </div>
+          <div class="entry-content">
+            <p>dear diary,</p>
+            <p>tonight i finally finished my website! it's not perfect but it's mine. i used so many sparkles and i don't even care if it's "too much." this is my space and i want it to shine ✨</p>
+            <p>i've been thinking a lot about how fast everything changes. one day we're on dial-up, the next we're dreaming of broadband. but some things stay the same — like how much i love writing to you at night when the house is quiet.</p>
+            <p class="signature">— sarah xoxo</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <span class="date">december 18, 2002</span>
+            <span class="time">9:42 pm</span>
+            <span class="weather">🌧️ rainy</span>
+          </div>
+          <div class="entry-content">
+            <p>dear diary,</p>
+            <p>found the prettiest song today. it makes me think of summer nights and driving with windows down. i wish i could share it with everyone who visits here. maybe one day i'll figure out how to add music to this page.</p>
+            <p>also: i finally beat that level i've been stuck on for weeks! small victories matter 💜</p>
+            <p class="signature">— sarah</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-header">
+            <span class="date">december 10, 2002</span>
+            <span class="time">7:15 pm</span>
+            <span class="weather">☀️ sunny</span>
+          </div>
+          <div class="entry-content">
+            <p>dear diary,</p>
+            <p>went to the mall with friends today. we looked at cds and tried on clothes we couldn't afford. it was perfect. i bought a glittery pen that i'm using to write this (well, technically i'm typing but you get the idea).</p>
+            <p class="signature">— s</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- ----- About ----- -->
+      <section id="about" class="about-section">
+        <h2 class="section-title">🌸 about me</h2>
+        <div class="about-card">
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-label">name</span>
+              <span class="stat-value">sarah</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">age</span>
+              <span class="stat-value">17</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">location</span>
+              <span class="stat-value">somewhere cozy</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">status</span>
+              <span class="stat-value">online ♡</span>
+            </div>
+          </div>
+          <p class="about-text">
+            hi! i'm just a girl who loves the internet, old music, and writing about my feelings. 
+            this is my little digital diary where i share pieces of my life with whoever happens to stumble upon it. 
+            thanks for being here 💜
+          </p>
+        </div>
+      </section>
+
+      <!-- ----- Favorites ----- -->
+      <section id="favorites">
+        <h2 class="section-title">💫 favorites</h2>
+        <div class="favorites-grid">
+          <div class="fav-card">
+            <h3>🎵 music</h3>
+            <ul>
+              <li>anything 90s</li>
+              <li>dream pop</li>
+              <li>lofi beats</li>
+            </ul>
+          </div>
+          <div class="fav-card">
+            <h3>📚 books</h3>
+            <ul>
+              <li>the perks of being a wallflower</li>
+              <li>princess diaries</li>
+              <li>harry potter (always)</li>
+            </ul>
+          </div>
+          <div class="fav-card">
+            <h3>🎬 movies</h3>
+            <ul>
+              <li>10 things i hate about you</li>
+              <li>clueless</li>
+              <li>legally blonde</li>
+            </ul>
+          </div>
+          <div class="fav-card">
+            <h3>🌈 colors</h3>
+            <ul>
+              <li>lavender</li>
+              <li>peach</li>
+              <li>mint green</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----- Guestbook ----- -->
+      <section id="guestbook" class="guestbook-section">
+        <h2 class="section-title">💌 say hi!</h2>
+        <div class="guestbook-card">
+          <p>leave me a little note? i read every single one 💜</p>
+          <form onsubmit="addGuestbookEntry(event)">
+            <input type="text" id="gb-name2" placeholder="your name..." required />
+            <textarea id="gb-msg2" rows="3" placeholder="your message..." required></textarea>
+            <button type="submit" class="send-btn">send with love 💜</button>
+          </form>
+          <div class="messages" id="gb-messages2">
+            <div class="message">
+              <span class="msg-name">stargazer_99:</span>
+              <span class="msg-text">your site is so cute! love the vibes ✨</span>
+            </div>
+            <div class="message">
+              <span class="msg-name">moon_child:</span>
+              <span class="msg-text">found this by accident and i'm so glad i did. keep writing!</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <p>made with 💜 by sarah · © 2002 · 
+        <span class="sparkles">✨</span> 
+        <a href="#">back to top</a>
+      </p>
+      <p class="tiny">best viewed with heart ♡</p>
+    </footer>
+
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
