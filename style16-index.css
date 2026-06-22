@@ -1,0 +1,39 @@
+/* =========================================================
+   Y2KAero — Index Page Styles (index16.html)
+   ========================================================= */
+
+/* ---------- Section head ---------- */
+.section-head {
+  color: #0a4d8c;
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 2px double #0066cc;
+  padding-bottom: 6px;
+}
+
+/* ---------- Blog scroll container ---------- */
+.blog-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.blog-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.blog-scroll::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #e8f4ff, #d8e8f8);
+  border-radius: 4px;
+}
+
+.blog-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0066cc, #004499);
+  border-radius: 4px;
+  border: 1px solid #003366;
+}
+
+.blog-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0077dd, #0055aa);
+}
