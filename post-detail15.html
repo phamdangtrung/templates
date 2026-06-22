@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A personal blog with Y2K sketchbook style." />
+  <title>~ Y2K Sketchbook ~ :: Post Detail</title>
+  <link rel="stylesheet" href="style15.css" />
+</head>
+<body>
+  <!-- Paper texture background -->
+  <div class="page">
+
+    <!-- ===== Header ===== -->
+    <header class="masthead">
+      <div class="header-gloss"></div>
+      <h1 class="logo"><span class="sparkle">✨</span> Y2K Sketchbook <span class="sparkle">✨</span></h1>
+      <p class="tagline blink">~ hand-drawn dreams since 1999 ~</p>
+    </header>
+
+    <!-- ===== Main layout ===== -->
+    <div class="layout">
+
+      <!-- ----- Navigation Sidebar (Left) ----- -->
+      <aside class="aside-left">
+        <nav class="sketch-nav">
+          <a href="index13.html" class="nav-item">🏠 Home</a>
+          <a href="index13.html#blog" class="nav-item">📝 Blog</a>
+          <a href="index13.html#about" class="nav-item">😎 About</a>
+          <a href="index13.html#guestbook" class="nav-item">📖 Guestbook</a>
+        </nav>
+      </aside>
+
+      <!-- ----- Main Content (Center) ----- -->
+      <main class="content">
+
+        <!-- Back to blog -->
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">📝</span>
+            <h2>post detail</h2>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body">
+            <a href="index13.html#blog" class="sketch-btn">« Back to Blog</a>
+          </div>
+        </div>
+
+        <!-- Post Detail -->
+        <article class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">🎨</span>
+            <h3>sketchbook aesthetics</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body">
+            <p class="sketch-meta">Dec 25, 1999 • 03:33 AM • SketchSurfer</p>
+            <p>Hand-drawn lines, paper textures, and imperfect borders — sketchbook style brings warmth to digital design.</p>
+            
+            <p>There's something magical about the imperfection of hand-drawn elements. In a world of perfect pixels and precise grids, the organic feel of sketchbook design stands out. It's like having a piece of the analog world in your digital space.</p>
+            
+            <h3>The Art of Imperfection</h3>
+            <p>Perfection is overrated. The slight wobble of a hand-drawn line, the uneven spacing of handwritten text — these quirks give character to design. They remind us that humans, not machines, created this content.</p>
+
+            <p>Here's a simple CSS snippet to create a sketchy border effect:</p>
+            
+            <pre class="code-block"><code>.sketchy-border {
+  border: 2px solid #3d5a80;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 4px 4px 0 rgba(61,90,128,.15);
+  transform: rotate(-0.3deg);
+}</code></pre>
+            
+            <p>This creates that hand-drawn feel with subtle rotation and offset shadows. The key is keeping it subtle — too much rotation looks messy, not artistic.</p>
+            
+            <h3>Paper Textures</h3>
+            <p>The foundation of sketchbook style is the paper texture. Whether it's lined notebook paper, grid paper, or blank sketchbook pages, the texture provides context and warmth.</p>
+
+            <p>You can create a lined paper effect with CSS gradients:</p>
+            
+            <pre class="code-block"><code>.lined-paper {
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      rgba(0,0,0,.03) 27px,
+      rgba(0,0,0,.03) 28px
+    );
+}</code></pre>
+            
+            <p>This creates that classic notebook paper look with subtle blue lines. Combine it with a warm paper color background for authenticity.</p>
+            
+            <h3>Hand-Drawn Typography</h3>
+            <p>The right font makes all the difference. Comic Sans MS gets a bad rap, but in the right context, it's perfect for sketchbook style. Pair it with Marker Felt or Chalkboard SE for variety.</p>
+            
+            <p>Remember: sketchbook style isn't about being messy — it's about being human. There's a difference. The goal is warmth and personality, not chaos.</p>
+            
+            <div class="post-tags">
+              <b>Tags:</b> <a href="#" class="tag-link">#Sketchbook</a> <a href="#" class="tag-link">#Design</a> <a href="#" class="tag-link">#HandDrawn</a> <a href="#" class="tag-link">#CSS</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post Navigation -->
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">🔀</span>
+            <h3>navigation</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body post-nav">
+            <div class="nav-prev">
+              <a href="#" class="sketch-btn">« Previous</a>
+              <p class="sketch-note">the future is now</p>
+            </div>
+            <div class="nav-next">
+              <a href="#" class="sketch-btn">Next »</a>
+              <p class="sketch-note">y2k chrome dreams</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">💬</span>
+            <h3>comments</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body">
+            <form onsubmit="addComment(event)">
+              <label>Name:<br><input type="text" id="comment-name" placeholder="sign your name" /></label>
+              <label>Comment:<br><textarea id="comment-msg" rows="3" placeholder="share your thoughts"></textarea></label>
+              <button type="submit" class="sketch-btn">[ POST COMMENT ]</button>
+            </form>
+            <ul class="guestbook" id="comment-list">
+              <li><b>art_lover:</b> Love the hand-drawn aesthetic! ✏️</li>
+              <li><b>sketch_fan:</b> Those CSS snippets are super helpful!</li>
+              <li><b>designer99:</b> Sketchbook style is so warm and personal.</li>
+            </ul>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- ----- Aside (Right) ----- -->
+      <aside class="aside-right">
+
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">👤</span>
+            <h3>about author</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body about">
+            <div class="sketch-avatar">🤖</div>
+            <div class="about-info">
+              <p><b>SketchSurfer</b><br>
+              Digital artist and sketchbook enthusiast. Blending hand-drawn charm with Y2K aesthetics.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">🏷️</span>
+            <h3>tags</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body">
+            <div class="tag-cloud">
+              <a href="#" class="tag-link">#Sketchbook</a>
+              <a href="#" class="tag-link">#Design</a>
+              <a href="#" class="tag-link">#HandDrawn</a>
+              <a href="#" class="tag-link">#CSS</a>
+              <a href="#" class="tag-link">#Y2K</a>
+              <a href="#" class="tag-link">#Paper</a>
+              <a href="#" class="tag-link">#Art</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">🗂️</span>
+            <h3>archives</h3>
+            <button class="archive-toggle" onclick="toggleArchive()">[−]</button>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body" id="archive-body">
+            <ul class="archive">
+              <li><a href="#">» Dec 1999 (12)</a></li>
+              <li><a href="#">» Nov 1999 (8)</a></li>
+              <li><a href="#">» Oct 1999 (15)</a></li>
+              <li><a href="#">» Sep 1999 (10)</a></li>
+              <li><a href="#">» Aug 1999 (7)</a></li>
+              <li><a href="#">» Jul 1999 (9)</a></li>
+              <li><a href="#">» Jun 1999 (11)</a></li>
+              <li><a href="#">» May 1999 (6)</a></li>
+              <li><a href="#">» Apr 1999 (13)</a></li>
+              <li><a href="#">» Mar 1999 (8)</a></li>
+              <li><a href="#">» Feb 1999 (5)</a></li>
+              <li><a href="#">» Jan 1999 (10)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sketch-card">
+          <div class="sketch-header">
+            <span class="sketch-icon">🔗</span>
+            <h3>cool links</h3>
+            <div class="tape"></div>
+          </div>
+          <div class="sketch-body">
+            <ul class="links">
+              <li><a href="#">★ Yahoo!</a></li>
+              <li><a href="#">★ AltaVista</a></li>
+              <li><a href="#">★ GeoCities</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="footer-bar"></div>
+      <p>© 1999–2002 Y2K Sketchbook · Made with Notepad · <a href="index13.html">[ BACK TO TOP ]</a></p>
+      <p class="small">
+        <span class="badge">IE 5.0+</span>
+        <span class="badge alt">Netscape</span>
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="script13.js"></script>
+  <script>
+    // ---- comments ----
+    function addComment(e) {
+      e.preventDefault();
+      var name = document.getElementById('comment-name').value.trim();
+      var msg = document.getElementById('comment-msg').value.trim();
+      if (!name || !msg) {
+        alert('Please sign your name and leave a comment!');
+        return;
+      }
+      var list = document.getElementById('comment-list');
+      var li = document.createElement('li');
+      li.innerHTML = '<b>' + escapeHtml(name) + ':</b> ' + escapeHtml(msg);
+      li.style.background = 'linear-gradient(180deg, #fff, #f5f0e6)';
+      li.style.padding = '8px 12px';
+      li.style.marginBottom = '8px';
+      li.style.borderRadius = '4px';
+      li.style.border = '2px dashed rgba(61,90,128,.3)';
+      li.style.transform = 'rotate(0.5deg)';
+      list.insertBefore(li, list.firstChild);
+      document.getElementById('comment-name').value = '';
+      document.getElementById('comment-msg').value = '';
+    }
+
+    function escapeHtml(text) {
+      var div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>
