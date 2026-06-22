@@ -181,7 +181,8 @@ body::before {
 }
 
 .sidebar-nav a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   font-weight: bold;
   font-size: 11px;
   color: #08243f;
