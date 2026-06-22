@@ -121,10 +121,13 @@ body::before {
 .window {
   margin-bottom: 8px;
   border-radius: 8px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .92), rgba(240, 250, 255, .88));
   border: 2px solid rgba(255, 255, 255, .7);
   box-shadow: 0 4px 14px rgba(8, 36, 63, .25), inset 0 2px 6px rgba(255, 255, 255, .8);
   overflow: hidden;
+}
+
+.window-content {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .92), rgba(240, 250, 255, .88));
 }
 
 .window-title {
@@ -163,6 +166,11 @@ body::before {
 .window-body p {
   margin: 0 0 6px;
   color: #08243f;
+}
+
+.window-body-transparent {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
 }
 
 /* ---------- Sidebar navigation ---------- */
