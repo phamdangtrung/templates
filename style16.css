@@ -13,3 +13,6 @@
 
 /* Import about page styles */
 @import url('style16-about.css');
+
+/* Import gallery page styles */
+@import url('style16-gallery.css');
