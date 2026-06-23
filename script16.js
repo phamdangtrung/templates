@@ -34,3 +34,8 @@ function escapeHtml(text) {
   div.textContent = text;
   return div.innerHTML;
 }
+
+// ---- bubble cursor effect ----
+document.addEventListener('DOMContentLoaded', function() {
+  cursoreffects.bubbleCursor();
+});
