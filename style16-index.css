@@ -37,3 +37,15 @@
 .blog-scroll::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #0077dd, #0055aa);
 }
+
+/* ---------- About section spacing ---------- */
+/* #about {
+  margin-top: 10px;
+} */
+
+/* ---------- Section separator ---------- */
+.section-separator {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0066cc, transparent);
+  margin: 7px 0;
+}
